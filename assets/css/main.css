@@ -4046,18 +4046,48 @@ body.is-preload #header.alt .logo {
 	}
 }
 
+.gridRow {
+	display: flex;
+}
+
 .grid-container {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: auto auto;
-	gap: 10px;
-	background-color: #2196F3;
+	/* gap: 10px; */
 	/* padding: 10px; */
 }
 
 .grid-container > div {
-	background-color: rgba(255, 255, 255, 0.8);
 	text-align: center;
-	padding: 20px 0;
+	max-height: max-content;
+	padding: 20px 10px;
 	font-size: 30px;
+}
+
+.gridLeft {
+	border-right: 1px solid #5f656d !important;
+	background-color: #c79cc8;
+}
+
+.gridRight {
+}
+
+.gridRight img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul li {
+	text-align: left;
+	font-size: 22px;
+}
+
+.indent {
+	margin-left: 40px;
+	list-style: none;
+}
+
+.achievements {
+	margin: 0 22vw;
 }
