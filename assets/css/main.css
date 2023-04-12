@@ -2998,17 +2998,16 @@ table.alt tbody tr td {
 	-webkit-justify-content: center;
 	-ms-justify-content: center;
 	justify-content: center;
-	width: calc(100% + 2em);
-	margin: 0 0 3em -2em;
 	padding: 0;
 	list-style: none;
 }
 
 .features li {
 	width: calc(33.33333% - 2em);
-	margin-left: 2em;
+	margin: 1em;
 	margin-top: 3em;
 	padding: 0;
+	padding-left: auto;
 }
 
 .features li:nth-child(1),
@@ -4031,6 +4030,7 @@ body.is-preload #header.alt .logo {
 	padding: 6px 12px;
 	border: 1px solid #ccc;
 	border-top: none;
+	border-bottom: none;
 	animation: fadeEffect 0.4s;
 	/* Fading effect takes 0.4 second */
 }
@@ -4066,7 +4066,7 @@ body.is-preload #header.alt .logo {
 }
 
 .gridLeft {
-	border-right: 1px solid #5f656d !important;
+	border-bottom: 1px solid #dddddd;
 	background-color: #c79cc8;
 }
 
@@ -4074,8 +4074,9 @@ body.is-preload #header.alt .logo {
 }
 
 .gridRight img {
-	max-width: 100%;
+	max-width: 85%;
 	height: auto;
+	border-radius: 15px;
 }
 
 ul li {
@@ -4091,3 +4092,16 @@ ul li {
 .achievements {
 	margin: 0 22vw;
 }
+
+.talign {
+	text-align: center;
+}
+
+.headers {
+	font-weight: bolder;
+}
+
+.spanIcon {
+	margin-left: auto;
+}
+
