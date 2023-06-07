@@ -1,0 +1,118 @@
+ /* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+   height: 100%;
+   width: 70%;
+   float: right;
+   /* margin: 2rem; */
+ }
+
+ /* 
+  * Optional: Makes the sample page fill the window. 
+  */
+ html,
+ body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+ }
+
+ /* Style for the expandable tiles */
+ .tile {
+   border: 1px solid #ccc;
+   padding: 10px;
+   margin-bottom: 10px;
+   cursor: pointer;
+ }
+
+ .tile-content {
+   display: none;
+ }
+
+ .tile.open .tile-content {
+   display: block;
+ }
+
+ #listview {
+   overflow: auto;
+   width: 30%;
+   height: 100%;
+   float: left;
+ }
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+   background-color: #eee;
+   color: #444;
+   cursor: pointer;
+   padding: 18px;
+   width: 100%;
+   border: none;
+   text-align: left;
+   outline: none;
+   font-size: 15px;
+ }
+
+ /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+ .active,
+ .collapsible:hover {
+   background-color: #ccc;
+ }
+
+ /* Style the collapsible content. Note: hidden by default */
+ .content {
+   /* padding: 0 18px; */
+   background-color: #dddddd;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.2s ease-out;
+ }
+
+ div.thumbnail {
+   height: 7em;
+   width: auto;
+   float: left;
+   padding: 1em;
+ }
+
+ img.thumbnail {
+   height: 100%;
+   width: auto;
+   border-radius: 13px;
+   box-shadow: 2px 2px #ccc;
+ }
+
+ div.info {
+   overflow: hidden;
+   height: 6em;
+   padding: 1.2em;
+ }
+
+ *::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   background-color: #F5F5F5;
+ }
+
+ *::-webkit-scrollbar {
+   width: 6px;
+   background-color: #F5F5F5;
+ }
+
+ *::-webkit-scrollbar-thumb {
+   background-color: #000000;
+ }
+
+ button.collapsible .tab:after {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+ }
+
+ button.collapsible.active .tab:after {
+   -webkit-transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   transform: rotate(180deg);
+ }
