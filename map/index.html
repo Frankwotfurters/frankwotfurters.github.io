@@ -23,23 +23,78 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
-<body onload="plotGroups(), enableCollapsibles()">
-  <!--The div element for the map -->
-  <div id="listview">
-    <!-- <button type="button" class="collapsible">Name
-      <span class="badge badge-pill badge-primary">♿</span>
-    </button>
-    <div class="content">
-      <div class="thumbnail">
-        <img class="thumbnail"
-          src="https://lh5.googleusercontent.com/p/AF1QipOX83lE1UtNwXvb-QEW8WUbNkiJNUhzgTYGKY3f=w143-h143-n-k-no">
-      </div>
-      <div class="info">
-        <h4>Name</h4>
-        <p>Description</p>
-      </div>
-    </div> -->
+<body>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4 id="modalTitle"></h4>
+      <p id="modalContent"></p>
+    </div>
   </div>
+  <div id="listview">
+    <div class="searchBar">
+      <div class="search-local">
+        <div class="icon">
+          <ion-icon name="location-outline"></ion-icon>
+        </div>
+
+        <input id="searchInput" type="text" placeholder="Search" onkeyup="filterSearch()">
+      </div>
+
+      <!-- icons -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </div>
+    <div class="button_container">
+      <div class="button_su">
+        <span class="su_button_circle">
+        </span>
+        <a class="button_su_inner" onclick="this.classList.toggle('active'); filterSearch();">
+          <span class="button_text_container">Disabled</span>
+        </a>
+      </div>
+      <div class="button_su">
+        <span class="su_button_circle">
+        </span>
+        <a class="button_su_inner" onclick="this.classList.toggle('active'); filterSearch();">
+          <span class="button_text_container">Elderly</span>
+        </a>
+      </div>
+      <div class="button_su">
+        <span class="su_button_circle">
+        </span>
+        <a class="button_su_inner" onclick="this.classList.toggle('active'); filterSearch();">
+          <span class="button_text_container">Children</span>
+        </a>
+      </div>
+    </div>
+    <div id="listPlaces">
+      <!-- <button type="button" id="SengkangCC" class="collapsible active">
+        <span class="tab" id="SengkangCCtags">Sengkang CC
+          <span class="badge badge-pill badge-primary tags">Disabled</span>
+          <span class="badge badge-pill badge-primary tags">Elderly</span>
+          <span class="badge badge-pill badge-primary tags">Children</span>
+        </span>
+      </button>
+      <div class="content" style="max-height: 98px;">
+        <div class="thumbnail">
+          <a target="_blank"
+            href="https://www.google.com.sg/maps/place/Sengkang+Community+Club/@1.3927683,103.8914553,17z/data=!3m1!5s0x31da160d8351afcd:0xbad1d8ce8d1976f6!4m6!3m5!1s0x31da160d761a5745:0x2c0490fe3727b540!8m2!3d1.3927683!4d103.8940302!16zL20vMDkxX3Bx?entry=ttu">
+            <img class="thumbnail"
+              src="https://lh5.googleusercontent.com/p/AF1QipOX83lE1UtNwXvb-QEW8WUbNkiJNUhzgTYGKY3f=w143-h143-n-k-no">
+          </a>
+        </div>
+        <div class="info">
+          <h4>Sengkang CC</h4>
+          <p>Lorem ipsum dolor sit amet</p><a class="read-more" data-title="Sengkang CC"
+            data-content="Lorem ipsum dolor sit amet">Read more</a>
+        </div>
+      </div> -->
+    </div>
+    <button class="button button-primary" onclick="test()">CLCK ME</button>
+  </div>
+
+  <!--The div element for the map -->
   <div id="map"></div>
 
   <script src="js/index.js"></script>
