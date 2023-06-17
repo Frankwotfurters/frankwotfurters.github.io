@@ -97,6 +97,16 @@ async function initMap() {
   //   });
   // }
   // Change the background color.
+  const toggleButton = document.createElement("button");
+
+  toggleButton.textContent = "Toggle Event/Organisation view";
+  toggleButton.classList.add("custom-map-control-button");
+
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toggleButton);
+  toggleButton.addEventListener("click", () => {
+    toggleMarkers();
+  });
+
   plotMarkers(data);
 }
 
@@ -127,7 +137,7 @@ function plotTiles(data) {
     listview.innerHTML +=
       '</span>' +
       '</button>' +
-      '<div class="content">' +
+      '<div class="collapsible_content">' +
       '<div class="thumbnail">' +
       '<a target="_blank" href="' + url + '" > <img class="thumbnail"' +
       'src="https://lh5.googleusercontent.com/p/AF1QipOX83lE1UtNwXvb-QEW8WUbNkiJNUhzgTYGKY3f=w143-h143-n-k-no"></a>' +
@@ -135,7 +145,11 @@ function plotTiles(data) {
       '<div class="info">' +
       '<h4>' + groupName + '</h4>' +
       '<p>' + "Lorem ipsum dolor sit amet" + '</p>' +
-      '<a class="read-more" data-title="' + groupName + '" data-content="Lorem ipsum dolor sit amet">Read more</a>' +
+      '<div class="content">' +
+      '<div class="buttons">' +
+      '<div id="six" class="button">Read more</div>' +
+      '</div>' +
+      '</div>' +
       '</div>' +
       '</div>';
   }
@@ -187,8 +201,10 @@ function toggleCollapsible(target) {
   }
 }
 
-function test() {
-  data = {
+var currentToggle = "red";
+function toggleMarkers() {
+
+  data2 = {
     "groups": [
       {
         "name": "Nan Chiau Primary School",
@@ -207,7 +223,15 @@ function test() {
     borderColor: '#0080FF',
   });
 
-  plotMarkers(data, bluePinBg);
+  if (currentToggle == "red") {
+    // swap to group 2
+    plotMarkers(data2, bluePinBg);
+    currentToggle = "blue";
+  }
+  else {
+    plotMarkers(data);
+    currentToggle = "red";
+  }
 }
 
 async function plotMarkers(markersData, pinElement = null) {
@@ -281,38 +305,14 @@ function filterSearch() {
 }
 
 function initModals() {
-  // Get the modal element
-  const modal = document.getElementById('myModal');
-
-  // Get the <span> element that closes the modal
-  const closeBtn = document.getElementsByClassName('close')[0];
-
-  // Get the elements inside the modal
-  const modalTitle = document.getElementById('modalTitle');
-  const modalContent = document.getElementById('modalContent');
-
-  // Get all the "Read more" buttons
-  const readMoreButtons = document.getElementsByClassName('read-more');
-
-  // Add click event listeners to each "Read more" button
-  Array.from(readMoreButtons).forEach(button => {
-    button.addEventListener('click', function () {
-      // Get the title and content from the button's data attributes
-      const title = this.getAttribute('data-title');
-      const content = this.getAttribute('data-content');
-
-      // Set the modal title and content
-      modalTitle.textContent = title; 
-      modalContent.textContent = content;
-
-      // Display the modal
-      modal.style.display = 'block';
-    });
-  });
-
-  // Add click event listener to the close button
-  closeBtn.addEventListener('click', function () {
-    // Hide the modal when the close button is clicked
-    modal.style.display = 'none';
+  $('.button').click(function () {
+    var buttonId = $(this).attr('id');
+    $('#modal-container').removeAttr('class').addClass(buttonId);
+    $('body').addClass('modal-active');
+  })
+  
+  $('#modal-container').click(function () {
+    $(this).addClass('out');
+    $('body').removeClass('modal-active');
   });
 }
