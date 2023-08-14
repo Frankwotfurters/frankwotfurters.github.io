@@ -28,7 +28,7 @@ div#editImg img {
   align-self: center;
 }
 
-#typeNumber {
+input.form-control {
   width: 100px;
   margin: auto;
 }
@@ -95,10 +95,23 @@ div#editImg img {
 
 .editImg {
   flex: 2;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
+.editorGrid {
+  display: grid;
+}
+
+#finalImg, #measurements{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+
 .editValues {
-  background-color: white;
+  background-color: #EFFFEF;
   flex: 1;
 }
 
@@ -107,4 +120,20 @@ div#editImg img {
   display: flex;
   align-items: center;
   padding: 0 30px;
+}
+
+#colorPicker {
+  width: 100px;
+}
+
+#bleedValue, #smoothValue {
+  grid-row: 1;
+  grid-column: 1;
+  margin-bottom: 0 !important;
+}
+
+#Bleed, #Smoothness {
+  grid-row: 2;
+  grid-column: 1;
+  margin: 0 5rem;
 }
