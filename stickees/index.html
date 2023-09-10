@@ -1,86 +1,324 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 
 <head>
-  <title>Image Manipulation Example</title>
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Switch Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        li.first {
+            padding: 0.5rem 0;
+        }
 
-  <style>
-  </style>
+        .finishesImg {
+            height: 200px;
+            width: 200px;
+            border: 5px solid #C3B1E1;
+            border-radius: 16px;
+            display: inline;
+        }
+
+        .finishLabel {
+            position: relative;
+            top: 24px;
+            background-color: #A7C7E7;
+            border: 5px solid #ACA5D9;
+            color: black;
+            padding: 6px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 50px;
+            font-family: "Pangolin", sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-  <!-- File drop -->
-  <div class="container center file-drop" id="file-drop">
-    <div class="area">
-      <input type="file" id="image-input" class="file-input" accept="image/png,image/jpeg">
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+                                <img class="header-logo-image asset-light" src="dist/images/logo-light.svg" alt="Logo">
+                                <img class="header-logo-image asset-dark" src="dist/images/logo-dark.svg" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" style="background-color: #FFF4E3; height: 60vh;">
+                <div class="container">
+                    <div class="hero-inner">
+                        <div class="hero-copy">
+                            <h1 class="hero-title mt-0" style="font-family: Pangolin;">STICKEES STICKERS</h1>
+                            <p class="hero-paragraph">your new favourite sticker makers
+                            <p>
+                            <div class="hero-cta">
+                                <a class="button button-primary" href="#">Order now</a>
+                            </div>
+                        </div>
+                        <div class="hero-media">
+                            <div class="header-illustration">
+                                <img class="header-illustration-image asset-light"
+                                    src="dist/images/header-illustration-light.svg" alt="Header illustration">
+                                <img class="header-illustration-image asset-dark"
+                                    src="dist/images/header-illustration-dark.svg" alt="Header illustration">
+                            </div>
+                            <div class="hero-media-illustration">
+                                <img class="hero-media-illustration-image asset-light"
+                                    src="dist/images/hero-media-illustration-light.svg" alt="Hero media illustration">
+                                <img class="hero-media-illustration-image asset-dark"
+                                    src="dist/images/hero-media-illustration-dark.svg" alt="Hero media illustration">
+                            </div>
+                            <div class="hero-media-container">
+                                <img class="hero-media-image asset-light" src="dist/images/test.jpg" alt="Hero media">
+                                <img class="hero-media-image asset-dark" src="dist/images/hero-media-dark.svg"
+                                    alt="Hero media">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features section" style="background-color: #2A4674;">
+                <div class="container">
+                    <div class="features-inner section-inner has-bottom-divider">
+                        <div class="features-header text-center">
+                            <div class="container-sm">
+                                <h2 class="section-title mt-0">SERVICES</h2>
+                                <p class="section-paragraph">check out the services we offer!</p>
+                                <div class="features-image">
+                                    <img class="features-illustration asset-dark"
+                                        src="dist/images/features-illustration-dark.svg" alt="Feature illustration">
+                                    <img class="features-box asset-dark" src="dist/images/features-box-dark.svg"
+                                        alt="Feature box">
+                                    <img class="features-illustration asset-dark"
+                                        src="dist/images/features-illustration-top-dark.svg"
+                                        alt="Feature illustration top">
+                                    <img class="features-illustration asset-light"
+                                        src="dist/images/features-illustration-light.svg" alt="Feature illustration">
+                                    <img class="features-box asset-light" src="dist/images/features-box-light.svg"
+                                        alt="Feature box">
+                                    <img class="features-illustration asset-light"
+                                        src="dist/images/features-illustration-top-light.svg"
+                                        alt="Feature illustration top">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+                                        <img class="asset-light" src="dist/images/feature-01-light.svg"
+                                            alt="Feature 01">
+                                        <img class="asset-dark" src="dist/images/feature-01-dark.svg" alt="Feature 01">
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="feature-title mt-0">Die-Cut Stickers</h3>
+                                        <p class="text-sm mb-0">Stickers cut to the shape of your design, typically with
+                                            a border</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+                                        <img class="asset-light" src="dist/images/feature-02-light.svg"
+                                            alt="Feature 02">
+                                        <img class="asset-dark" src="dist/images/feature-02-dark.svg" alt="Feature 02">
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="feature-title mt-0">Sticker Sheets</h3>
+                                        <p class="text-sm mb-0">A sheet which holds multiple sticker designs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+                                        <img class="asset-light" src="dist/images/feature-03-light.svg"
+                                            alt="Feature 03">
+                                        <img class="asset-dark" src="dist/images/feature-03-dark.svg" alt="Feature 03">
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="feature-title mt-0">Bleed Service</h3>
+                                        <p class="text-sm mb-0">Try our <a
+                                                href="https://frankwotfurters.github.io/stickees/"
+                                                target="_blank">online tool</a> to generate quick custom bleeds for your
+                                            sticker needs!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="finishes section" style="background-color: #FF968C;">
+                <div class="container-sm">
+                    <div class="cta-inner section-inner">
+                        <div class="cta-header text-center">
+                            <h2 class="section-title mt-0">Our Sticker Finishes</h2>
+                            <p class="section-paragraph">can be applied to both die-cut stickers and sticker sheets!</p>
+                            <div style="display: grid;">
+                                <div style="grid-row: 1; grid-column: 1; text-align: center; position: relative;">
+                                    <div class="finishLabel">Glossy</div>
+                                    <br>
+                                    <img class="finishesImg" id="finish1"
+                                        src="https://i.kym-cdn.com/entries/icons/original/000/041/895/AALIYAH_WROTE_JAY_AN_APOLOGY_LETTER%F0%9F%93%83__MARK_WANT_DESIREE_AND_HANNAH!%F0%9F%98%B1_4-32_screenshot_(1).jpg">
+                                </div>
+                                <div style="grid-row: 1; grid-column: 2; text-align: center;">
+                                    <div class="finishLabel">Matte (Textured)</div>
+                                    <br>
+                                    <img class="finishesImg"
+                                        src="https://i.kym-cdn.com/entries/icons/original/000/041/895/AALIYAH_WROTE_JAY_AN_APOLOGY_LETTER%F0%9F%93%83__MARK_WANT_DESIREE_AND_HANNAH!%F0%9F%98%B1_4-32_screenshot_(1).jpg">
+                                </div>
+                                <div style="grid-row: 1; grid-column: 3; text-align: center;">
+                                    <div class="finishLabel">Holographic</div>
+                                    <br>
+                                    <img class="finishesImg"
+                                        src="https://i.kym-cdn.com/entries/icons/original/000/041/895/AALIYAH_WROTE_JAY_AN_APOLOGY_LETTER%F0%9F%93%83__MARK_WANT_DESIREE_AND_HANNAH!%F0%9F%98%B1_4-32_screenshot_(1).jpg">
+                                </div>
+                                <div style="grid-row: 2; grid-column: 1; text-align: center;">
+                                    <div class="finishLabel">Starry Night</div>
+                                    <br>
+                                    <img class="finishesImg"
+                                        src="https://i.kym-cdn.com/entries/icons/original/000/041/895/AALIYAH_WROTE_JAY_AN_APOLOGY_LETTER%F0%9F%93%83__MARK_WANT_DESIREE_AND_HANNAH!%F0%9F%98%B1_4-32_screenshot_(1).jpg">
+                                </div>
+                                <div style="grid-row: 2; grid-column: 2; text-align: center;">
+                                    <div class="finishLabel">Broken Glass</div>
+                                    <br>
+                                    <img class="finishesImg"
+                                        src="https://i.kym-cdn.com/entries/icons/original/000/041/895/AALIYAH_WROTE_JAY_AN_APOLOGY_LETTER%F0%9F%93%83__MARK_WANT_DESIREE_AND_HANNAH!%F0%9F%98%B1_4-32_screenshot_(1).jpg">
+                                </div>
+                                <div style="grid-row: 2; grid-column: 3; text-align: center;">
+                                    <div class="finishLabel">Shooting Star</div>
+                                    <br>
+                                    <img class="finishesImg"
+                                        src="https://i.kym-cdn.com/entries/icons/original/000/041/895/AALIYAH_WROTE_JAY_AN_APOLOGY_LETTER%F0%9F%93%83__MARK_WANT_DESIREE_AND_HANNAH!%F0%9F%98%B1_4-32_screenshot_(1).jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="" style="background-color: #2A4674;">
+                <div style="display: grid; text-align: center; padding: 5rem 0;">
+                    <div style="grid-row: 1; grid-column: span 3;">
+                        <img style="height: 500px; width: 500px; border-radius: 26px; display: inline;"
+                            src="https://i.kym-cdn.com/entries/icons/original/000/041/895/AALIYAH_WROTE_JAY_AN_APOLOGY_LETTER%F0%9F%93%83__MARK_WANT_DESIREE_AND_HANNAH!%F0%9F%98%B1_4-32_screenshot_(1).jpg">
+                    </div>
+                    <div style="grid-row: 1; grid-column: span 2; text-align: justify;">
+                        <h2 class="section-title mt-0">WHY CHOOSE US?</h2>
+                        <ul>
+                            <li class="first">Hands off service!</li>
+                            <ul style="margin-bottom: 8px;">
+                                <li style="list-style-type: circle; margin-left: 1em;">Just send us your design and we'll take care of the rest!</li>
+                            </ul>
+                            <li class="first">Design proofs before printing!</li>
+                            <li class="first">Low MOQ and affordable prices!</li>
+                            <li class="first">Cutline creator app <a href="https://frankwotfurters.github.io/stickees/index.html">(try it here)</a>!</li>
+                            <li class="first">Friendly service!</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta section" style="background-color: #FF968C;">
+                <div class="container-sm">
+                    <div class="cta-inner section-inner">
+                        <div class="cta-header text-center">
+                            <h2 class="section-title mt-0">Order now!</h2>
+                            <p class="section-paragraph">drop us an email/DM to get a quote for your order!</p>
+                            <i class="fa-regular fa-envelope fa-xl"></i>
+                            <p class="section-paragraph" style="display: inline-block;"><a href="mailto:stickees.stickers@gmail.com">stickees.stickers@gmail.com</a></p>
+                            <br>
+                            <i class="fa-brands fa-instagram fa-xl"></i>
+                            <p class="section-paragraph" style="display: inline-block;"><a href="https://www.instagram.com/stickees.stickers/" target="_blank">@stickees.stickers</a></p>
+                            <div class="cta-cta">
+                                <a class="button button-primary" href="#">Place an order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer has-top-divider">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="#">
+                            <img class="asset-light" src="dist/images/logo-light.svg" alt="Logo">
+                            <img class="asset-dark" src="dist/images/logo-dark.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ's</a>
+                        </li>
+                        <li>
+                            <a href="#">Support</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="https://www.instagram.com/stickees.stickers/" target="_blank">
+                                <span class="screen-reader-text">Instagram</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                                        fill="#FFF" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Email</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" fill="#FFF" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Google</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z"
+                                        fill="#FFF" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">&copy; 2018 Switch, all rights reserved</div>
+                </div>
+            </div>
+        </footer>
     </div>
-  </div>
-  <!-- File drop END -->
-  <!-- Editor -->
-  <div class="container center editor" id="editor">
-    <div class="flexbox">
-      <div class="editImg" id="editImg"></div>
-      <div class="editValues">
-        <div class="form-outline inputNumber">
-          <label class="form-label" for="typeNumber">DPI</label>
-          <input type="number" id="typeNumber" value="300" class="form-control" oninput="editBleed()">
-        </div>
-        <div class="editorGrid">
-          <label for="Bleed" class="form-label" id="bleedValue">Bleed: 10</label>
-          <input type="range" class="form-range" id="Bleed" min="0" max="50" step="0.5" value="10"
-            oninput="document.getElementById('bleedValue').innerHTML = 'Bleed: ' + this.value" onchange="editBleed()">
-          <br>
-        </div>
-        <div class="editorGrid">
-          <label for="Smoothness" class="form-label" id="smoothValue">Smoothness: 5</label>
-          <input type="range" class="form-range" id="Smoothness" min="0" max="50" step="5" value="5"
-            oninput="document.getElementById('smoothValue').innerHTML = 'Smoothness: ' + this.value" onchange="editBleed()">
-          <br>
-        </div>
-        <label for="colorPicker" class="form-label">Color:  </label>
-        <input type="color" id="colorPicker" oninput="editColor()" value="#ffffff">
-        <br>
-        <div class="editorGrid">
-          <div style="grid-column: 1; grid-row: 1; padding:0.5rem;">
-            <label for="imgWidth" class="form-label" id="imgWidthLabel">Design Width:</label>
-            <input type="number" id="imgWidth" class="form-control" oninput="editSize(0, this.value)" data-changed=null>
-          </div>
 
-          <div style="grid-column: 2; grid-row: 1; padding:0.5rem;">
-            <label for="imgHeight" class="form-label" id="imgHeightLabel">Design Height:</label>
-            <input type="number" id="imgHeight" class="form-control" oninput="editSize(1, this.value)" data-changed=null>
-          </div>
-
-          <div style="grid-column: 1; grid-row: 2; padding:0.5rem;">
-            <label for="newImgWidth" class="form-label" id="newImgWidthLabel">Total Width:</label>
-            <input type="number" id="newImgWidth" class="form-control" oninput="editSize(2, this.value)" data-changed=null>
-          </div>
-
-          <div style="grid-column: 2; grid-row: 2; padding:0.5rem;">
-            <label for="newImgHeight" class="form-label" id="newImgHeightLabel">Total Height:</label>
-            <input type="number" id="newImgHeight" class="form-control" oninput="editSize(3, this.value)" data-changed=null>
-          </div>
-
-          <div style="grid-column: span 2; grid-row: 3; padding:0.5rem;">
-            <label for="bleedWidth" class="form-label" id="bleedWidthLabel">Bleed (per side):</label>
-            <input type="number" id="bleedWidth" class="form-control" disabled>
-          </div>
-
-          <div style="grid-column: span 2; grid-row: 4; padding:0.5rem">
-            <a href="" id="downloadButton"><button class="btn btn-outline-secondary">Download Image</button></a>
-          </div>
-        </div>
-        <img id="original-image" src="#" style="display: none;" alt="Original Image">
-      </div>
-    </div>
-  </div>
-  <!-- Editor END -->
-
-  <script src="js/index.js"></script>
+    <script src="dist/js/main.min.js"></script>
 </body>
 
 </html>
