@@ -5,7 +5,7 @@ let map;
 var markers = [];
 
 // Example data
-data = {
+let data = {
   "groups": [
     {
       "name": "Sengkang CC",
@@ -204,7 +204,7 @@ function toggleCollapsible(target) {
 var currentToggle = "red";
 function toggleMarkers() {
 
-  data2 = {
+  let data2 = {
     "groups": [
       {
         "name": "Nan Chiau Primary School",
