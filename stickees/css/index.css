@@ -1,139 +1,64 @@
-html {
-  background-color: grey;
-  background: linear-gradient(to right, #4568dc, #b06ab3);
-  color: #D7D7EF;
+[class*="col-"] {
+  float: left;
+  padding: 15px;
 }
 
-body {
-  background: linear-gradient(to right, #4568dc, #b06ab3);
-  color: #D7D7EF;
-  font-family: 'Lato', sans-serif;
-  height: 100vh-5em;
-}
-
-.center {
-  margin: 10vh 0;
-  text-align: center;
-  background-color: thistle;
-  /* border: 3px solid tomato; */
-  box-shadow: 0 10px 30px;
-  padding: 0 !important;
-}
-
-div#editImg img {
-  border: 2px solid grey;
-}
-
-.inputNumber {
-  align-self: center;
-}
-
-input.form-control {
-  width: 100px;
-  margin: auto;
-}
-
-.file-drop {
-  overflow: hidden;
-  height: 80vh;
-  border-radius: 30px;
-}
-
-.area {
-  height: 84%;
-  border: 4px dashed #000;
-  border-radius: 30px;
-  background-image: url("https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/upload-512.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 64px 64px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  filter: alpha(opacity=50);
-  -khtml-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-  text-align: center;
-  margin: 4%;
-}
-
-.area input {
-  width: 400%;
-  height: 100%;
-  margin-left: -300%;
-  border: none;
-  cursor: pointer;
-}
-
-.area input:focus {
-  outline: none;
-}
-
-.area .spinner {
-  display: none;
-  margin-top: 50%;
-}
-
-.area:hover,
-.area.dragging,
-.area.uploading {
-  filter: alpha(opacity=100);
-  -khtml-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-}
-
-.area.uploading {
-  background: none;
-}
-
-.editor {
-  display: none;
-  border-radius: 30px;
-}
-
-.editImg {
-  flex: 2;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.editorGrid {
-  display: grid;
-}
-
-#finalImg, #measurements{
-  grid-column: 1;
-  grid-row: 1;
-}
-
-
-.editValues {
-  background-color: #EFFFEF;
-  flex: 1;
-}
-
-.flexbox {
+/* For mobile phones: */
+[class*="col-"] {
   width: 100%;
-  display: flex;
+}
+
+.desktop-left {
+  text-align: center;
   align-items: center;
-  padding: 0 30px;
 }
 
-#colorPicker {
-  width: 100px;
+li.first {
+  padding: 0.5rem 0;
 }
 
-#bleedValue, #smoothValue {
-  grid-row: 1;
-  grid-column: 1;
-  margin-bottom: 0 !important;
+.finishesImg {
+  width: 65%;
+  height: auto;
+  border: 5px solid #C3B1E1;
+  border-radius: 16px;
+  display: inline;
 }
 
-#Bleed, #Smoothness {
-  grid-row: 2;
-  grid-column: 1;
-  margin: 0 5rem;
+.finishLabel {
+  position: relative;
+  top: 24px;
+  background-color: #A7C7E7;
+  border: 5px solid #ACA5D9;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50px;
+  font-family: "Pangolin", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .finishesImg {width: 100%;}
+  .desktop-left {text-align: left;}
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
