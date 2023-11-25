@@ -18,12 +18,35 @@ li.first {
   padding: 0.5rem 0;
 }
 
-.finishesImg {
-  width: 65%;
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hoverImg {
+  width: 100%;
   height: auto;
   border: 3px solid #5A2C2C;
   border-radius: 16px;
   display: inline;
+}
+
+.finishesImg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  border: 3px solid #5A2C2C;
+  border-radius: 16px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s ease;
+}
+
+.imgContainer:hover .finishesImg {
+  opacity: 0;
 }
 
 .finishLabel {
@@ -38,6 +61,7 @@ li.first {
   display: inline-block;
   border-radius: 50px;
   font-family: "Pangolin", sans-serif;
+  z-index: 999;
 }
 
 .bottomright {

@@ -3,6 +3,7 @@
 
 <head>
     <title>Stickees Stickers</title>
+    <link rel="icon" href="src/images/logo.svg" type="image/icon type">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,15 +19,11 @@
 
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
-        <header class="site-header" style="background-color: #FFA8DC !important;">
+        <header class="site-header" style="background-color: #FFA8DC !important; padding: 0.2rem !important;">
             <div class="container">
                 <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="#">
-                                <img class="header-logo-image asset-light" src="dist/images/logo-light.svg" alt="Logo">
-                            </a>
-                        </h1>
+                    <div class="brand header-brand" style="margin: 0 auto;">
+                        <p style="font-family: Nunito, sans-serif; font-size: 15px; color: rgb(0, 0, 0); margin-bottom: 0 !important;">sticker sample pack for all laminates now available! click <a href="#">here</a> to order!</p>
                     </div>
                 </div>
             </div>
@@ -44,9 +41,9 @@
                         </div>
                         <div class="col-6">
                             <div style="text-align: center;">
-                                <div class="feature is-revealing" style="margin-bottom: 0px !important; text-align: center !important;">
-                                    <h1
-                                        style="font-family: Pangolin; margin-bottom: 0px !important">
+                                <div class="feature is-revealing"
+                                    style="margin-bottom: 0px !important; text-align: center !important;">
+                                    <h1 style="font-family: Pangolin; margin-bottom: 0px !important">
                                         STICKEES STICKERS</h1>
                                     <p style="text-align: center !important; ">your new favourite sticker makers</p>
                                     <a class="button button-primary" href="#">Order now</a>
@@ -86,9 +83,8 @@
                             <div class="feature is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-                                        <img class="asset-light" src="dist/images/feature-01-light.svg"
+                                        <img class="asset-light" src="src/images/logo.png" style="height: 48px; width: 48px;"
                                             alt="Feature 01">
-                                        <img class="asset-dark" src="dist/images/feature-01-dark.svg" alt="Feature 01">
                                     </div>
                                     <div class="feature-content">
                                         <h3 class="feature-title mt-0" style="font-family: Pangolin;">Die-Cut Stickers
@@ -101,23 +97,21 @@
                             <div class="feature is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-                                        <img class="asset-light" src="dist/images/feature-02-light.svg"
+                                        <img class="asset-light" src="src/images/logo.png" style="height: 48px; width: 48px;"
                                             alt="Feature 02">
-                                        <img class="asset-dark" src="dist/images/feature-02-dark.svg" alt="Feature 02">
                                     </div>
                                     <div class="feature-content">
-                                        <h3 class="feature-title mt-0" style="font-family: Pangolin;">Sticker Sheets
+                                        <h3 class="feature-title mt-0" style="font-family: Pangolin;">Kiss-Cut Sticker Sheets
                                         </h3>
-                                        <p class="text-sm mb-0">A sheet which holds multiple sticker designs</p>
+                                        <p class="text-sm mb-0">A sticker sheet which holds multiple sticker designs cut out</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="feature is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-                                        <img class="asset-light" src="dist/images/feature-03-light.svg"
+                                        <img class="asset-light" src="src/images/logo.png" style="height: 48px; width: 48px;"
                                             alt="Feature 03">
-                                        <img class="asset-dark" src="dist/images/feature-03-dark.svg" alt="Feature 03">
                                     </div>
                                     <div class="feature-content">
                                         <h3 class="feature-title mt-0" style="font-family: Pangolin;">Bleed Service</h3>
@@ -140,39 +134,60 @@
                             <p class="section-paragraph">can be applied to both die-cut stickers and sticker sheets!</p>
                             <div class="row">
                                 <div class="col-4" style="text-align: center; position: relative;">
-                                    <div class="finishLabel">Glossy</div>
+                                    <div class="finishLabel">Glitter (Textured)</div>
                                     <br>
-                                    <img class="finishesImg" id="finish1" src="src/images/test.png">
-                                </div>
-                                <div class="col-4" style="text-align: center; position: relative;">
-                                    <div class="finishLabel">Matte (Textured)</div>
-                                    <br>
-                                    <img class="finishesImg" id="finish1" src="src/images/test.png">
-                                </div>
-                                <div class="col-4" style="text-align: center; position: relative;">
-                                    <div class="finishLabel">Holographic</div>
-                                    <br>
-                                    <img class="finishesImg" id="finish1" src="src/images/test.png">
-                                </div>
-                                <div class="col-4" style="text-align: center; position: relative;">
-                                    <div class="finishLabel">Starry Night</div>
-                                    <br>
-                                    <img class="finishesImg" id="finish1" src="src/images/test.png">
+                                    <div class="imgContainer">
+                                        <img class="finishesImg" src="src/images/laminates/glitter.png">
+                                        <img class="hoverImg" src="src/images/laminates/test.gif">
+                                    </div>
                                 </div>
                                 <div class="col-4" style="text-align: center; position: relative;">
                                     <div class="finishLabel">Shooting Stars</div>
                                     <br>
-                                    <img class="finishesImg" id="finish1" src="src/images/test.png">
+                                    <div class="imgContainer">
+                                        <img class="finishesImg" src="src/images/laminates/shooting_stars.png">
+                                        <img class="hoverImg" src="src/images/test.png">
+                                    </div>
                                 </div>
                                 <div class="col-4" style="text-align: center; position: relative;">
-                                    <div class="finishLabel">Broken Glass</div>
+                                    <div class="finishLabel">Starry Night</div>
                                     <br>
-                                    <img class="finishesImg" id="finish1" src="src/images/test.png">
+                                    <div class="imgContainer">
+                                        <img class="finishesImg" src="src/images/laminates/starry_night.png">
+                                        <img class="hoverImg" src="src/images/test.png">
+                                    </div>
                                 </div>
                                 <div class="col-4" style="text-align: center; position: relative;">
-                                    <div class="finishLabel">Glitter (Textured)</div>
+                                    <div class="finishLabel">Shattered Glass</div>
                                     <br>
-                                    <img class="finishesImg" id="finish1" src="src/images/test.png">
+                                    <div class="imgContainer">
+                                        <img class="finishesImg" src="src/images/laminates/shattered_glass.png">
+                                        <img class="hoverImg" src="src/images/test.png">
+                                    </div>
+                                </div>
+                                <div class="col-4" style="text-align: center; position: relative;">
+                                    <div class="finishLabel">Holographic</div>
+                                    <br>
+                                    <div class="imgContainer">
+                                        <img class="finishesImg" src="src/images/laminates/holographic.png">
+                                        <img class="hoverImg" src="src/images/test.png">
+                                    </div>
+                                </div>
+                                <div class="col-4" style="text-align: center; position: relative;">
+                                    <div class="finishLabel">Glossy</div>
+                                    <br>
+                                    <div class="imgContainer">
+                                        <img class="finishesImg" src="src/images/laminates/glossy.png">
+                                        <img class="hoverImg" src="src/images/test.png">
+                                    </div>
+                                </div>
+                                <div class="col-4" style="text-align: center; position: relative;">
+                                    <div class="finishLabel">Matte (Textured)</div>
+                                    <br>
+                                    <div class="imgContainer">
+                                        <img class="finishesImg" src="src/images/laminates/matte.png">
+                                        <img class="hoverImg" src="src/images/test.png">
+                                    </div>
                                 </div>
                                 <!-- <div class="col-4" style="text-align: center; position: relative; text-align: right;">
                                     <div style="width: 65%; height: auto; margin: auto;">
@@ -186,7 +201,7 @@
                 </div>
             </section>
 
-            <section class="" style="background-color: #2A4674;">
+            <section class="" style="background-color: #FFFDD0;">
                 <div class="container">
                     <div class="row" style="padding: 2rem;">
                         <div class="col-5" style="text-align: center;"> <img
@@ -211,7 +226,7 @@
                 </div>
             </section>
 
-            <section class="cta section" style="background-color: #FF968C;">
+            <section class="cta section" style="background-color: #CEE5FD;">
                 <div class="container-sm">
                     <div class="cta-inner section-inner">
                         <div class="cta-header text-center">
@@ -234,7 +249,7 @@
             </section>
         </main>
 
-        <footer class="site-footer has-top-divider">
+        <footer class="site-footer has-top-divider" style="background-color: #FFA8DC;">
             <div class="container">
                 <div class="site-footer-inner">
                     <div class="brand footer-brand">
@@ -287,7 +302,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; 2018 Switch, all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2023 stickees.stickers<div>
                 </div>
             </div>
         </footer>
