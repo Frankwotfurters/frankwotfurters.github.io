@@ -1,0 +1,118 @@
+a {
+    color: blue !important;
+    text-decoration: none !important; 
+    /* no underline */
+}
+
+.container {
+    width: 50%;
+}
+
+.title-div {
+    float: left;
+    vertical-align: bottom;
+    width: auto;
+}
+
+.header-logo {
+    max-width: 100px;
+}
+
+.header-logo-div {
+    float: right;
+}
+
+.manga_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.manga {
+    border: 2px solid grey;
+    border-radius: 20px;
+    background-color: #D3D3D3;
+    position: relative;
+
+}
+
+.manga_thumbnail {
+    width: 100%;
+    padding: 20px;
+    object-fit: contain;
+}
+
+.title {
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-open {
+    background: #007bff;
+    color: white;
+}
+
+.btn-close {
+    background: red;
+    color: white;
+}
+
+.btn-add {
+    background: green;
+    color: white;
+}
+
+.unread {
+    border-radius: 8px;
+    position: absolute;
+    color: white;
+    font-size: larger;
+    right: 0;
+    top: 0;
+    background-color: rgb(254, 176, 176);
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+}
