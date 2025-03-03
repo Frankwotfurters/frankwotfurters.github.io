@@ -13,7 +13,7 @@ function addManga() {
     if (url) {
         let saved_manga = JSON.parse(localStorage.getItem("savedManga")) || {};
         if (!saved_manga.hasOwnProperty(url)) {
-            fetch(`http://127.0.0.1:5000/import_manga?url=${url}`)
+            fetch(`https://13.214.130.193:5000/import_manga?url=${url}`)
             .then(response => response.json())
             .then(data => {
                 saved_manga[url] = data;
@@ -52,7 +52,7 @@ function updateMangaList() {
         let h4 = document.createElement("h4");
         let u = document.createElement("u");
         
-        fetch(`http://127.0.0.1:5000/get_last?source=${encodeURIComponent(saved_manga[url]['source'])}&id=${encodeURIComponent(saved_manga[url]['manga_id'])}`)
+        fetch(`https://13.214.130.193:5000/get_last?source=${encodeURIComponent(saved_manga[url]['source'])}&id=${encodeURIComponent(saved_manga[url]['manga_id'])}`)
         .then(response => response.json())
         .then(data => {
             last_read = saved_manga[url]['last_read'];
