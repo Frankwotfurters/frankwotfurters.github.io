@@ -52,7 +52,7 @@ function fetchChapters() {
         return;
     }
 
-    fetch(`https://13.214.130.193:5000/get_chapters?source=${encodeURIComponent(source)}&id=${encodeURIComponent(id)}`)
+    fetch(`https://13.214.130.193:443/get_chapters?source=${encodeURIComponent(source)}&id=${encodeURIComponent(id)}`)
         .then(response => response.json())
         .then(data => {
             let saved_manga = JSON.parse(localStorage.getItem("savedManga")) || {};
