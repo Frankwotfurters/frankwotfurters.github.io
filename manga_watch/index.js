@@ -52,7 +52,7 @@ function updateMangaList() {
         let h4 = document.createElement("h4");
         let u = document.createElement("u");
         
-        fetch(`https://13.214.130.193:443/get_last?source=${encodeURIComponent(saved_manga[url]['source'])}&id=${encodeURIComponent(saved_manga[url]['manga_id'])}`)
+        fetch(`https://frankfurters.duckdns.org/get_last?source=${encodeURIComponent(saved_manga[url]['source'])}&id=${encodeURIComponent(saved_manga[url]['manga_id'])}`)
         .then(response => response.json())
         .then(data => {
             last_read = saved_manga[url]['last_read'];
