@@ -13,7 +13,7 @@ function addManga() {
     if (url) {
         let saved_manga = JSON.parse(localStorage.getItem("savedManga")) || {};
         if (!saved_manga.hasOwnProperty(url)) {
-            fetch(`https://13.214.130.193:443/import_manga?url=${url}`)
+            fetch(`https://frankfurters.duckdns.org/import_manga?url=${url}`)
             .then(response => response.json())
             .then(data => {
                 saved_manga[url] = data;
